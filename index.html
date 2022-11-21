@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" media="screen" href="css/main.css">
     <script type="text/javascript">
+
 var ua = navigator.userAgent;
 var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
-isIphone = ua.match(/(iPhone\sOS)\s([\d_]+)/),
+isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
 isAndroid = ua.match(/(Android)\s+([\d.]+)/),
-ismb = isIphone || ipad || isAndroid;
-if(isMobile)
-{ window.location.href="m/";}
+isMobile = isIphone || isAndroid;
+if(isMobile){
+
+	window.location.href="m";
+}
 </script>
         </head>
     <body style="">
